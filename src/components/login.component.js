@@ -4,41 +4,14 @@ export default class Login extends Component {
   render() {
     return (
       <form>
-        <h3>Sign Up</h3>
+        <h3>Sign In</h3>
 
         <div className="mb-3">
-          <label>First Name</label>
-          <input
-            type="name"
-            className="form-control"
-            placeholder="First Name"
-          />
-        </div>
-
-        <div className="mb-3">
-          <label>Last Name</label>
-          <input
-            type="name"
-            className="form-control"
-            placeholder="Last Name"
-          />
-        </div>
-
-        <div className="mb-3">
-          <label>Username</label>
-          <input
-            type="name"
-            className="form-control"
-            placeholder="Username"
-          />
-        </div>
-
-        <div className="mb-3">
-          <label>Email</label>
+          <label>Email address</label>
           <input
             type="email"
             className="form-control"
-            placeholder="Email"
+            placeholder="Enter email"
           />
         </div>
 
@@ -47,8 +20,21 @@ export default class Login extends Component {
           <input
             type="password"
             className="form-control"
-            placeholder="Password"
+            placeholder="Enter password"
           />
+        </div>
+
+        <div className="mb-3">
+          <div className="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              className="custom-control-input"
+              id="customCheck1"
+            />
+            <label className="custom-control-label" htmlFor="customCheck1">
+              Remember me
+            </label>
+          </div>
         </div>
 
         <div className="d-grid">
@@ -56,7 +42,9 @@ export default class Login extends Component {
             Submit
           </button>
         </div>
-      
+        <p className="forgot-password text-right">
+          Forgot <a href="#">password?</a>
+        </p>
       </form>
     )
   }

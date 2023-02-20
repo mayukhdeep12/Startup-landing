@@ -5,15 +5,17 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 import Login from './components/login.component'
 import SignUp from './components/signup.component'
+import AboutPage from './components/about.component'
+import SupportUsPage from './components/support.component'
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
             <Link className="navbar-brand" to={'/sign-in'}>
-              positronX
+              Startup
             </Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul className="navbar-nav ml-auto">
@@ -27,10 +29,20 @@ function App() {
                     Sign up
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/about'}>
+                    About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/support'}>
+                    Support
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
-        </nav> */}
+        </nav>
 
         <div className="auth-wrapper">
           <div className="auth-inner">
@@ -38,6 +50,8 @@ function App() {
               <Route exact path="/" element={<Login />} />
               <Route path="/sign-in" element={<Login />} />
               <Route path="/sign-up" element={<SignUp />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/support" element={<SupportUsPage />} />
             </Routes>
           </div>
         </div>
